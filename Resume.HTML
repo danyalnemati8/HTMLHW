@@ -14,7 +14,7 @@
 
     header {
       background-color: #333;
-      color: #fff;
+      color: yellow;
       padding: 20px;
     }
 
@@ -57,9 +57,9 @@
 
   <header>
     <h1 style="font-size: 2em;">Danyal Nemati</h1>
-    <p>Email: <a href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
-    <p>Website: <a href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
-    <p>Social: <a href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a>
+    <p>Email: <a id="email" href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
+    <p>Website: <a id="website" href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
+    <p>Social: <a id="linkedin" href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a></p>
   </header>
 
   <section class="work">
@@ -102,9 +102,11 @@
   <button id="educationButton" style="font-size: 1em;">Toggle Education</button>
 
   <script>
-    document.getElementById('educationButton').addEventListener('click', function() {
-      var educationSection = document.querySelector('.education');
-      educationSection.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('educationButton').addEventListener('click', function() {
+        var educationSection = document.querySelector('.education');
+        educationSection.classList.toggle('hidden');
+      });
     });
   </script>
 
