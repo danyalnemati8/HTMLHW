@@ -27,6 +27,10 @@
       padding: 0;
     }
 
+    .work h2, .skills h2, .education h2 {
+      margin-top: 20px;
+    }
+
     .work li, .skills li {
       margin-bottom: 10px;
     }
@@ -52,14 +56,14 @@
 <body>
 
   <header>
-    <h1>John Doe</h1>
-    <p>Email: johndoe@example.com</p>
-    <p>Website: <a href="https://www.example.com">www.example.com</a></p>
-    <p>Social: <a href="https://www.linkedin.com/in/johndoe">LinkedIn</a>, <a href="https://twitter.com/johndoe">Twitter</a></p>
+    <h1 style="font-size: 2em;">Danyal Nemati</h1>
+    <p>Email: <a href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
+    <p>Website: <a href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
+    <p>Social: <a href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a>
   </header>
 
   <section class="work">
-    <h2>Work Experience</h2>
+    <h2 style="font-size: 1.5em;">Work Experience</h2>
     <ul>
       <li>
         <h3>Software Developer</h3>
@@ -75,7 +79,7 @@
   </section>
 
   <section class="skills">
-    <h2>Skills</h2>
+    <h2 style="font-size: 1.5em;">Skills</h2>
     <ul>
       <li>HTML</li>
       <li>CSS</li>
@@ -86,7 +90,7 @@
   </section>
 
   <section class="education">
-    <h2>Education</h2>
+    <h2 style="font-size: 1.5em;">Education</h2>
     <ul>
       <li>
         <h3>Bachelor of Science in Computer Science</h3>
@@ -95,13 +99,13 @@
     </ul>
   </section>
 
-  <button onclick="toggleEducation()">Toggle Education</button>
+  <button id="educationButton" style="font-size: 1em;">Toggle Education</button>
 
   <script>
-    function toggleEducation() {
+    document.getElementById('educationButton').addEventListener('click', function() {
       var educationSection = document.querySelector('.education');
       educationSection.classList.toggle('hidden');
-    }
+    });
   </script>
 
 </body>
