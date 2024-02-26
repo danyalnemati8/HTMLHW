@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Résumé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .work li, .skills li {
+      margin-bottom: 10px;
+    }
+
+    .education li {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>John Doe</h1>
+    <p>Email: johndoe@example.com</p>
+    <p>Website: <a href="https://www.example.com">www.example.com</a></p>
+    <p>Social: <a href="https://www.linkedin.com/in/johndoe">LinkedIn</a>, <a href="https://twitter.com/johndoe">Twitter</a></p>
+  </header>
+
+  <section class="work">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>
+        <h3>Software Developer</h3>
+        <p>XYZ Company, 2020 - Present</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </li>
+      <li>
+        <h3>Web Designer</h3>
+        <p>ABC Corporation, 2018 - 2020</p>
+        <p>Nulla facilisi. Sed non risus.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>React</li>
+      <li>Node.js</li>
+    </ul>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <ul>
+      <li>
+        <h3>Bachelor of Science in Computer Science</h3>
+        <p>University of Example, 2014 - 2018</p>
+      </li>
+    </ul>
+  </section>
+
+  <button onclick="toggleEducation()">Toggle Education</button>
+
+  <script>
+    function toggleEducation() {
+      var educationSection = document.querySelector('.education');
+      educationSection.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
