@@ -13,7 +13,9 @@
     <p>Website: <a id="website" href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
     <p>Social: <a id="linkedin" href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a></p>
   </header>
-  
+
+  <button id="educationButton" style="font-size: 1em; margin-bottom: 20px;">Toggle Education</button>
+
   <div class="container">
     <section class="work">
       <h2 style="font-size: 1.5em;">Work Experience</h2>
@@ -41,20 +43,18 @@
         <li>Node.js</li>
       </ul>
     </section>
+
+    <section class="education">
+      <h2 style="font-size: 1.5em;">Education</h2>
+      <ul>
+        <li>
+          <h3>Bachelor of Science in Computer Science</h3>
+          <p>California State University Fullerton, 2020 - 2024</p>
+        </li>
+      </ul>
+    </section>
   </div>
   <hr>
-
-  <section class="education">
-    <h2 style="font-size: 1.5em;">Education</h2>
-    <ul>
-      <li>
-        <h3>Bachelor of Science in Computer Science</h3>
-        <p>California State University Fullerton, 2020 - 2024</p>
-      </li>
-    </ul>
-  </section>
-
-  <button id="educationButton" style="font-size: 1em;">Toggle Education</button>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -106,11 +106,11 @@
 
     .container {
       display: flex;
-      justify-content: space-between; /* Align items with space between them */
+      justify-content: space-between; 
     }
 
-    .work, .skills {
-      width: 48%; /* Adjust the width as needed */
+    .work, .skills, .education {
+      width: 30%; 
     }
 
     .work h2, .skills h2, .education h2 {
@@ -131,7 +131,6 @@
       border: none;
       padding: 10px 20px;
       cursor: pointer;
-      margin-top: 20px;
     }
 
     .hidden {
