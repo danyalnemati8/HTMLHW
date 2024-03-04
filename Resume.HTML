@@ -65,12 +65,24 @@
 
 </body>
 <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    animation: backgroundAnimation 5s forwards;
+    background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
+    background-size: 200% 100%;
+  }
+
+  @keyframes backgroundAnimation {
+    0% {
+      background-position: -100% 0;
     }
+    100% {
+      background-position: 0 0;
+    }
+  }
 
     header {
       background-color: #333;
