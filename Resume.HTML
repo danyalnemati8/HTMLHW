@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Résumé</title>
- 
 </head>
 <body>
 
@@ -14,33 +13,36 @@
     <p>Website: <a id="website" href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
     <p>Social: <a id="linkedin" href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a></p>
   </header>
+  
+  <div class="container">
+    <section class="work">
+      <h2 style="font-size: 1.5em;">Work Experience</h2>
+      <ul>
+        <li>
+          <h3>FullStack Developer</h3>
+          <p>DAuth, Feb 2024 - Present</p>
+          <p>Offer your visitors the convenience of social account authentication while preserving their data confidentiality.</p>
+        </li>
+        <li>
+          <h3>Computer Science Tutor</h3>
+          <p>KidsToProz, Feb 2024 - Present</p>
+          <p>Teaching the younger generation(K-8th) how to code.</p>
+        </li>
+      </ul>
+    </section>
 
-  <section class="work">
-    <h2 style="font-size: 1.5em;">Work Experience</h2>
-    <ul>
-      <li>
-        <h3>FullStack Developer</h3>
-        <p>DAuth, Feb 2024 - Present</p>
-        <p>Offer your visitors the convenience of social account authentication while preserving their data confidentiality.</p>
-      </li>
-      <li>
-        <h3>Computer Science Tutor</h3>
-        <p>KidsToProz, Feb 2024 - Present</p>
-        <p>Teaching the younger generation(K-8th) how to code.</p>
-      </li>
-    </ul>
-  </section>
-
-  <section class="skills">
-    <h2 style="font-size: 1.5em;">Skills</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-    </ul>
-  </section>
+    <section class="skills">
+      <h2 style="font-size: 1.5em;">Skills</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>Node.js</li>
+      </ul>
+    </section>
+  </div>
+  <hr>
 
   <section class="education">
     <h2 style="font-size: 1.5em;">Education</h2>
@@ -63,26 +65,25 @@
     });
   </script>
 
-</body>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    animation: backgroundAnimation 5s forwards;
-    background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
-    background-size: 200% 100%;
-  }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      animation: backgroundAnimation 5s forwards;
+      background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
+      background-size: 200% 100%;
+    }
 
-  @keyframes backgroundAnimation {
-    0% {
-      background-position: -100% 0;
+    @keyframes backgroundAnimation {
+      0% {
+        background-position: -100% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
     }
-    100% {
-      background-position: 0 0;
-    }
-  }
 
     header {
       background-color: #333;
@@ -93,12 +94,23 @@
     h1, h2, h3 {
       margin-top: 0;
     }
+
     section h3 {
       font-weight: bold;
     }
+
     ul {
       list-style-type: none;
       padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between; /* Align items with space between them */
+    }
+
+    .work, .skills {
+      width: 48%; /* Adjust the width as needed */
     }
 
     .work h2, .skills h2, .education h2 {
@@ -125,8 +137,17 @@
     .hidden {
       display: none;
     }
+
     header a {
-        color: yellow;
-      }
+      color: yellow;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
   </style>
+</body>
 </html>
