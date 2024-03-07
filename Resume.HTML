@@ -8,10 +8,14 @@
 <body>
 
   <header>
+    <a href="https://imgur.com/a/Fi43ScJ">
+      <img src="https://imgur.com/a/Fi43ScJ" alt="Your Image">
+    </a>
     <h1 style="font-size: 2em;">Danyal Nemati</h1>
     <p>Email: <a id="email" href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
     <p>Website: <a id="website" href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
     <p>Social: <a id="linkedin" href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a></p>
+    <img src="https://github-readme-stats.vercel.app/api?username=danyalnemati8&show_icons=true" alt="GitHub Stats">
   </header>
 
   <button id="educationButton" style="font-size: 1em; margin-bottom: 20px;">Toggle Education</button>
@@ -66,6 +70,7 @@
   </script>
 
   <style>
+    /* Default styling */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -146,6 +151,22 @@
       height: 1px;
       background-color: #ccc;
       margin: 20px 0;
+    }
+
+    /*for iPhones */
+    @media only screen and (max-width: 767px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .work, .skills, .education {
+        width: 100%;
+      }
     }
   </style>
 </body>
