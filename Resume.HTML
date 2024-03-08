@@ -4,18 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Résumé</title>
+  
 </head>
 <body>
-
   <header>
-    <a href="https://imgur.com/a/Fi43ScJ">
-      <img src="https://imgur.com/a/Fi43ScJ" alt="Your Image">
-    </a>
-    <h1>Danyal Nemati</h1>
-    <p>Email: <a id="email" href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
-    <p>Website: <a id="website" href="https://danyalnemati8.github.io/newjs/">https://danyalnemati8.github.io/newjs/</a></p>
-    <p>Social: <a id="linkedin" href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn</a></p>
-    <img src="https://github-readme-stats.vercel.app/api?username=danyalnemati8&show_icons=true" alt="GitHub Stats">
+    <div class="github-stats">
+      <img src="https://github-readme-stats.vercel.app/api?username=danyalnemati8&show_icons=true" alt="GitHub Stats">
+    </div>
+    <div class="header-content">
+      <h1 id="name">Danyal Nemati     </h1>
+      <p id="email">  <a href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
+      <p id="website">Website: <a href="https://danyalnemati8.github.io/newjs/">DanyalNemati.com</a></p>
+      <p id="linkedin">LinkedIn: <a href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn/danyalnemati</a></p>
+
+
+    </div>
   </header>
 
   <button id="educationButton" style="font-size: 1em; margin-bottom: 20px;">Toggle Education</button>
@@ -68,109 +71,136 @@
       });
     });
   </script>
+</body>
+<style>
+  /* Default styling */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    animation: backgroundAnimation 5s forwards;
+    background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
+    background-size: 200% 100%;
+  }
 
-  <style>
-    /* Default styling */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 20px;
-      animation: backgroundAnimation 5s forwards;
-      background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
-      background-size: 200% 100%;
-    }
 
-    @keyframes backgroundAnimation {
-      0% {
-        background-position: -100% 0;
-      }
-      100% {
-        background-position: 0 0;
-      }
-    }
+  header {
+    background-color: #333;
+    color: yellow;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
+  .github-stats {
+    margin-right: 20px;
+  }
+
+  .header-content {
+    flex-grow: 1; 
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1, h2, h3 {
+    margin-top: 0;
+  }
+
+  section h3 {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+  .work, .skills, .education {
+    width: 30%; 
+  }
+
+  .work h2, .skills h2, .education h2 {
+    margin-top: 20px;
+  }
+
+  .work li, .skills li {
+    margin-bottom: 10px;
+  }
+
+  .education li {
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  header a {
+    color: yellow;
+    font-size: 1.35em;
+    margin-right: 20px;
+    margin-left: 20px; 
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+    margin: 20px 0;
+  }
+
+  /*for iPhones */
+  @media only screen and (max-width: 767px) {
     header {
-      background-color: #333;
-      color: yellow;
-      padding: 20px;
-    }
-
-    h1, h2, h3 {
-      margin-top: 0;
-    }
-
-    section h3 {
-      font-weight: bold;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
+      flex-direction: column;
+      align-items: center;
     }
 
     .container {
-      display: flex;
-      justify-content: space-between; 
+      flex-direction: column;
     }
 
     .work, .skills, .education {
-      width: 30%; 
+      width: 100%;
     }
 
-    .work h2, .skills h2, .education h2 {
-      margin-top: 20px;
+    .github-stats img {
+      width: 120%; 
+      max-width: 170px; 
     }
 
-    .work li, .skills li {
-      margin-bottom: 10px;
+    .github-stats {
+      margin-bottom: 20px; 
     }
 
-    .education li {
-      margin-bottom: 20px;
+    .header-content {
+      width: 100%;
+      justify-content: flex-start; 
+      margin-top: 0;
     }
 
-    button {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
+    .header-content p {
+      margin-right: 0;
     }
-
-    .hidden {
-      display: none;
+    .education {
+      padding-bottom: 35px;
     }
-
-    header a {
-      color: yellow;
-    }
-    header p {
-      font-size: 1.5em;
-    }
-
-    hr {
-      border: 0;
-      height: 1px;
-      background-color: #ccc;
-      margin: 20px 0;
-    }
-
-    /*for iPhones */
-    @media only screen and (max-width: 767px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .container {
-        flex-direction: column;
-      }
-
-      .work, .skills, .education {
-        width: 100%;
-      }
-    }
-  </style>
-</body>
+  }
+</style>
 </html>
