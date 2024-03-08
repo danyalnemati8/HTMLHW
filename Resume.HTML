@@ -5,6 +5,137 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Résumé</title>
   
+  <style>
+    /* Default styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      animation: backgroundAnimation 5s forwards;
+      background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
+      background-size: 200% 100%;
+    }
+
+
+    header {
+      background-color: #333;
+      color: yellow;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .github-stats {
+      margin-right: 20px;
+    }
+
+    .header-content {
+      flex-grow: 1;
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    h1, h2, h3 {
+      margin-top: 0;
+    }
+
+    section h3 {
+      font-weight: bold;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .work, .skills, .education {
+      width: 30%;
+    }
+
+    .work h2, .skills h2, .education h2 {
+      margin-top: 20px;
+    }
+
+    .work li, .skills li {
+      margin-bottom: 10px;
+    }
+
+    .education li {
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    header a {
+      color: yellow;
+      font-size: 1.35em;
+      margin-right: 20px;
+      margin-left: 20px; 
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+      margin: 20px 0;
+    }
+
+    /*for iPhones */
+    @media only screen and (max-width: 767px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .container {
+        flex-direction: column;
+      }
+
+      .work, .skills, .education {
+        width: 100%;
+      }
+
+      .github-stats img {
+        width: 120%; 
+        max-width: 170px; 
+      }
+
+      .github-stats {
+        margin-bottom: 20px; 
+      }
+
+      .header-content {
+        width: 100%;
+        justify-content: flex-start; 
+        margin-top: 0;
+      }
+
+      .header-content p {
+        margin-right: 0;
+      }
+      .education {
+        padding-bottom: 35px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -12,12 +143,10 @@
       <img src="https://github-readme-stats.vercel.app/api?username=danyalnemati8&show_icons=true" alt="GitHub Stats">
     </div>
     <div class="header-content">
-      <h1 id="name">Danyal Nemati     </h1>
-      <p id="email">  <a href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
+      <h1 id="name">Danyal Nemati</h1>
+      <p id="email"><a href="mailto:nematidanyal@gmail.com">nematidanyal@gmail.com</a></p>
       <p id="website">Website: <a href="https://danyalnemati8.github.io/newjs/">DanyalNemati.com</a></p>
       <p id="linkedin">LinkedIn: <a href="https://www.linkedin.com/in/danyal-nemati-01b673221/">LinkedIn/danyalnemati</a></p>
-
-
     </div>
   </header>
 
@@ -72,135 +201,4 @@
     });
   </script>
 </body>
-<style>
-  /* Default styling */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    animation: backgroundAnimation 5s forwards;
-    background-image: linear-gradient(to right, #a69595a4 50%, #560808 50%);
-    background-size: 200% 100%;
-  }
-
-
-  header {
-    background-color: #333;
-    color: yellow;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
-  .github-stats {
-    margin-right: 20px;
-  }
-
-  .header-content {
-    flex-grow: 1; 
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  h1, h2, h3 {
-    margin-top: 0;
-  }
-
-  section h3 {
-    font-weight: bold;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  .container {
-    display: flex;
-    justify-content: space-between; 
-  }
-
-  .work, .skills, .education {
-    width: 30%; 
-  }
-
-  .work h2, .skills h2, .education h2 {
-    margin-top: 20px;
-  }
-
-  .work li, .skills li {
-    margin-bottom: 10px;
-  }
-
-  .education li {
-    margin-bottom: 20px;
-  }
-
-  button {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  header a {
-    color: yellow;
-    font-size: 1.35em;
-    margin-right: 20px;
-    margin-left: 20px; 
-  }
-
-  hr {
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-    margin: 20px 0;
-  }
-
-  /*for iPhones */
-  @media only screen and (max-width: 767px) {
-    header {
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .container {
-      flex-direction: column;
-    }
-
-    .work, .skills, .education {
-      width: 100%;
-    }
-
-    .github-stats img {
-      width: 120%; 
-      max-width: 170px; 
-    }
-
-    .github-stats {
-      margin-bottom: 20px; 
-    }
-
-    .header-content {
-      width: 100%;
-      justify-content: flex-start; 
-      margin-top: 0;
-    }
-
-    .header-content p {
-      margin-right: 0;
-    }
-    .education {
-      padding-bottom: 35px;
-    }
-  }
-</style>
 </html>
